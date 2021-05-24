@@ -5,7 +5,14 @@ public abstract class Calculador {
 	
 	
 	public double calcularPrecio(double precioPrenda){
-		return this.calcularPrecio(precioPrenda);
+		return precioPrenda + recargoUnitario(precioPrenda) + impuestoAduanero(precioPrenda)
+		+transporte(precioPrenda)+ bonificacion(precioPrenda)+ precioFinal(precioPrenda);
 	}
 
+	public abstract double recargoUnitario(double precio);
+	public abstract double impuestoAduanero(double precio);
+	public abstract double precioFinal(double precio);
+	public abstract double transporte(double precio);
+	public abstract double bonificacion(double precio);
+	
 }

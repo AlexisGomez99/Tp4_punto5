@@ -15,7 +15,7 @@ public class CalculadorTest {
 		Calculador remera= new RemerasImportadas();
 		double resultado=remera.calcularPrecio(100);
 		
-		assertEquals(resultado , 135.1875d);
+		assertEquals(resultado , 133.0d);
 		
 	}
 	
@@ -24,6 +24,6 @@ public class CalculadorTest {
 		Calculador remera= new RemerasNoImportadas();
 		double resultado=remera.calcularPrecio(100);
 		
-		assertEquals(resultado , 140.07d);
+		assertEquals(resultado , 136.5d);
 	}
 }

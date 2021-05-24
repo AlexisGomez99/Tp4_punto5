@@ -6,12 +6,29 @@ public class RemerasImportadas extends Calculador{
 		
 	}
 
-	public double calcularPrecio(double precioPrenda) {
-		double total= precioPrenda +(precioPrenda * 0.03);
-		total += total*0.05;
-		total += total* 0.25;
-		return total;
-		
+	@Override
+	public double recargoUnitario(double precio) {
+		return precio * 0.03;
+	}
+
+	@Override
+	public double impuestoAduanero(double precio) {
+		return precio * 0.05;
+	}
+
+	@Override
+	public double precioFinal(double precio) {
+		return precio * 0.25;
+	}
+
+	@Override
+	public double transporte(double precio) {
+		return 0;
+	}
+
+	@Override
+	public double bonificacion(double precio) {
+		return 0;
 	}
 	
 }

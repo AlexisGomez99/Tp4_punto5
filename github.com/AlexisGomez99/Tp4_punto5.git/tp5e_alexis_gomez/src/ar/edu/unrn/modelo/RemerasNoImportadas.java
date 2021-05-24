@@ -6,11 +6,28 @@ public class RemerasNoImportadas extends Calculador{
 
 	}
 
-	public double calcularPrecio(double precioPrenda) {
-		double total= precioPrenda +(precioPrenda * 0.015);
-		total += total*0.2;
-		total += total*0.15;
-		return total;
-		
+	@Override
+	public double recargoUnitario(double precio) {
+		return 0;
+	}
+
+	@Override
+	public double impuestoAduanero(double precio) {
+		return 0;
+	}
+
+	@Override
+	public double precioFinal(double precio) {
+		return precio * 0.15;
+	}
+
+	@Override
+	public double transporte(double precio) {
+		return precio * 0.015;
+	}
+
+	@Override
+	public double bonificacion(double precio) {
+		return precio * 0.20;
 	}
 }
